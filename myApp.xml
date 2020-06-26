@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="tk.Toplevel" id="Main">
+    <property name="borderwidth">6</property>
+    <property name="cursor">arrow</property>
+    <property name="geometry">1024x600</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">MainWindow</property>
+    <bind add="" handler="" sequence="" />
+    <child>
+      <object class="ttk.Frame" id="FrameContainer">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Button" id="TrainButton">
+            <property name="command">train</property>
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Train</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relheight">0.12</property>
+              <property name="relwidth">0.19</property>
+              <property name="relx">0.41</property>
+              <property name="rely">0.85</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="ClassButton">
+            <property name="command">addClass</property>
+            <property name="text" translatable="yes">Add class</property>
+            <bind add="" handler="" sequence="" />
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relheight">0.06</property>
+              <property name="relwidth">0.12</property>
+              <property name="relx">0.08</property>
+              <property name="rely">0.93</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame_2">
+            <property name="borderwidth">3</property>
+            <property name="height">200</property>
+            <property name="relief">raised</property>
+            <property name="width">200</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="height">470</property>
+              <property name="relheight">0</property>
+              <property name="relwidth">0.27</property>
+              <property name="relx">0.01</property>
+              <property name="rely">0.01</property>
+              <property name="width">350</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="imgLabel">
+                <property name="compound">right</property>
+                <property name="cursor">arrow</property>
+                <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
+                  <property name="propagate">True</property>
+                  <property name="side">top</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator_1">
+            <property name="orient">horizontal</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relwidth">0.24</property>
+              <property name="relx">0.03</property>
+              <property name="rely">0.9</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="classEntry">
+            <property name="text" translatable="yes">label</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relwidth">0.19</property>
+              <property name="relx">0.05</property>
+              <property name="rely">0.83</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator_2">
+            <property name="orient">vertical</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relheight">0.19</property>
+              <property name="relwidth">0.0</property>
+              <property name="relx">0.37</property>
+              <property name="rely">0.81</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Treeview" id="treeView">
+            <property name="selectmode">none</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relheight">0.8</property>
+              <property name="relwidth">0.37</property>
+              <property name="relx">0.63</property>
+              <property name="rely">0.01</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Treeview.Column" id="column_1">
+                <property name="column_anchor">w</property>
+                <property name="minwidth">20</property>
+                <property name="stretch">true</property>
+                <property name="text" translatable="yes">Labels</property>
+                <property name="tree_column">true</property>
+                <property name="visible">true</property>
+                <property name="width">200</property>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Treeview.Column" id="column_2">
+                <property name="column_anchor">w</property>
+                <property name="heading_anchor">center</property>
+                <property name="minwidth">20</property>
+                <property name="stretch">true</property>
+                <property name="text" translatable="yes">Probability</property>
+                <property name="tree_column">false</property>
+                <property name="visible">true</property>
+                <property name="width">200</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="Counter">
+            <property name="font">{Arial} 14 {}</property>
+            <property name="justify">center</property>
+            <layout manager="place">
+              <property name="relheight">0.05</property>
+              <property name="relwidth">0.19</property>
+              <property name="relx">0.72</property>
+              <property name="rely">0.84</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Progressbar" id="progressBar">
+            <property name="maximum">150</property>
+            <property name="orient">horizontal</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="relheight">0.03</property>
+              <property name="relwidth">0.22</property>
+              <property name="relx">0.71</property>
+              <property name="rely">0.95</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Menu" id="menu">
+    <child>
+      <object class="tk.Menuitem.Submenu" id="labelsSubmenu">
+        <property name="label" translatable="yes">Labels</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="import">
+            <property name="command">menuLabels</property>
+            <property name="command_id_arg">true</property>
+            <property name="label" translatable="yes">Import</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="export">
+            <property name="command">menuLabels</property>
+            <property name="command_id_arg">true</property>
+            <property name="label" translatable="yes">Export</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
